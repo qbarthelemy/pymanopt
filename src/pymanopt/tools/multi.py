@@ -19,9 +19,7 @@ def multitransp(A):
     containing the ``M`` matrix transposes of the matrices in ``A``, each of
     which will be ``P x N``.
     """
-    if A.ndim == 2:
-        return A.T
-    return np.transpose(A, (0, 2, 1))
+    return np.swapaxes(A, -1, -2)
 
 
 def multihconj(A):
